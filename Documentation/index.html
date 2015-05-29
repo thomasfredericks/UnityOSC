@@ -91,32 +91,35 @@ public class ReceiveOSCTest: MonoBehaviour {
           alt="" width="100%"> </p>
       <br>
       <hr>
-      <h2><a name="props"></a>Methods of OSC</h2>
+      <h2><a name="props"></a>OSC</h2>
                 
       <table>
             <tr>
-                <td class="first">SetAddressHandler( <span class="hilite">address</span> , <span class="hilite">name
+                <td class="first">SetAddressHandler( <span class="hilite">address</span> , <span class="lite">name
             of function</span> )</td>
                 <td class="second"><span class="type void">void</span></td>
-                <td> Sets a <span class="hilite">handler function</span> to be called when a
+                <td> Sets a <span class="lite">handler function</span> to be called when a
           message with the specified <span class="hilite">address</span> is
           received</td>
             </tr>
              <tr>
-                <td>SetAllMessageHandler( <span class="hilite">name of function</span>)</td>
+                <td>SetAllMessageHandler( <span class="lite">name of function</span> )</td>
                 <td><span class="type void">void</span></td>
-                <td> Sets a <span class="hilite">handler function</span> to be called when
+                <td> Sets a <span class="lite">handler function</span> to be called when
               any message is received (there can only be one SetAllMessageHandler handler function 
               )</td>
             </tr>
         </table>  
       
-      <p>The handler function must be as follows :</p>
-      <pre class="prettyprint">void NameOfFunction ( OscMessage message ) { }
+      <p>The <span class="lite">handler function</span> must be as follows :</p>
+      <pre class="prettyprint">
+void NameOfFunction ( OscMessage message ) {
+
+}
 </pre>
 <br>
 
-           <h2>Methods of OSCMessage</h2>
+           <h2>OSCMessage</h2>
         <table>
             <tr>
                 <td class="first">address</td>
@@ -126,7 +129,7 @@ public class ReceiveOSCTest: MonoBehaviour {
              <tr>
                 <td>GetFloat( <span class="hilite">index</span> )</td>
                 <td><span class="type number">float</span></td>
-                <td>Returns the value at that <span class="hilite">index</span> as a <span class="hilite">float</span></td>
+                <td>Returns the value at that <span class="hilite">index</span>
             </tr>
         </table>
         

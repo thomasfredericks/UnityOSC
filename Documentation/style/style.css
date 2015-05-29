@@ -27,7 +27,14 @@ h1, h2, h3, h4, h5, h6 {
     font-family: Lucida Grande, arial, sans-serif;
     color: #222;
     margin: 15px 0;
+	
 }
+
+h2, h3, h4, h5, h6 {
+    border-bottom: 1px dotted #BBB;
+	
+}
+
 
 h1 {
      font-size: 4em;
@@ -69,7 +76,7 @@ width: 35px;
 }
 
 .void { 
-background-color: #999;
+background-color: #000;
 }
 
 .object { 
@@ -130,7 +137,19 @@ clear: both;
 }
 
 
-.hilite {background-color:#eee;
+.hilite {background-color:#ccc;
+padding:2px;
+border-radius:2px;
+}
+
+.lite {background-color:#aaa;
+color:#000;
+padding:2px;
+border-radius:2px;
+}
+
+.darklite {background-color:#333;
+color:#fff;
 padding:2px;
 border-radius:2px;
 }
@@ -147,8 +166,10 @@ table {
     border: 0px solid  #eeeeee;
     width: 100%;
     border-collapse: collapse;
-    /*background-color: #f0f0f0;*/
+    background-color: #eeeeee;
 }
+
+
 
 td.first {
     width: 300px;
@@ -160,7 +181,7 @@ td.second {
 }
 
 td, th {
-   
+   vertical-align:top;
     border: 0px solid #98bf21;
     padding: 3px 7px 2px 7px;
     
