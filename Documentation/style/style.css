@@ -1,8 +1,9 @@
-/* CopyRight (c) 2013 John Robinson - http://www.storminthecastle.com */
 
 body { 
 color: #333;
 font: 12px/18px Lucida Grande, Arial, sans-serif;
+	background-image: url("background.jpg");
+    
 }
 
 canvas { 
@@ -18,7 +19,12 @@ user-select: none;
 
 #container { 
 width: 900px;
-margin: 0 auto;
+margin: 50px auto;
+padding: 15px;
+background-color: #ffffff;
+-webkit-box-shadow: -2px -1px 9px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -2px -1px 9px 0px rgba(0,0,0,0.75);
+box-shadow: -2px -1px 9px 0px rgba(0,0,0,0.75);
 }
 
 
@@ -59,6 +65,10 @@ font-family: Monaco, monospace;
 color: #333;
 }
 
+.screenshot {
+width: 100%;
+box-shadow: 3px 3px 5px #888888;
+}
 
 .type {
 /*display: block;*/
