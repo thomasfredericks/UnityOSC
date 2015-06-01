@@ -65,6 +65,10 @@ font-family: Monaco, monospace;
 color: #333;
 }
 
+.hidden {
+display: none;
+}
+
 .screenshot {
 width: 100%;
 box-shadow: 3px 3px 5px #888888;
@@ -122,19 +126,19 @@ font-style: italic;
 
 
 a:link {
-color: #3380FF;
+color: #C12942;
 }
 
 a:visited {
-color: #48BD00;
+color: #53263A;
 }
 
 a:hover {
-color: #e30b5d;
+color: #50797B;
 }
 
 a:active {
-color: #536895;
+color: #D95B44;
 }
 
 
