@@ -16,15 +16,14 @@ function handleLoad() {
   <body onload="handleLoad();">
   
     <div id="container">
+        <img style="margin-left: auto;margin-right: auto;display:block" src="images/unityosc.png">
         <br>
       <h1>UnityOSC</h1>
       <p>Open Sound Control (OSC) for Unity 3D.</p>
 	  <div id="generated-toc" class="generate_from_h2"></div>
       <h2>Get It!</h2>
       <ul>
-        <li><a href="https://github.com/thomasfredericks/UnityOSC/archive/master.zip"
-
-            download="goo.min.js"><strong>Download the source</strong></a></li>
+        <li><a href="https://github.com/thomasfredericks/UnityOSC/archive/master.zip"><strong>Download the source</strong></a></li>
         <li><a href="https://github.com/thomasfredericks/UnityOSC">UnityOSC on
             github<br>
           </a></li>
@@ -49,7 +48,7 @@ function handleLoad() {
         OSC message to control the size of a cube.</p>
       <p>Create the following script called <span class="hilite">ReceiveOSCTest.cs</span>
         :</p>
-      <pre class="prettyprint">using UnityEngine;
+       <pre class="prettyprint" ><code>using UnityEngine;
 using System.Collections;
 
 public class ReceiveOSCTest: MonoBehaviour {
@@ -80,7 +79,7 @@ public class ReceiveOSCTest: MonoBehaviour {
 	
 	}
 }
-	
+</code>	
 </pre>
       
       <p>Drag the script onto a cube :</p>
@@ -94,7 +93,7 @@ public class ReceiveOSCTest: MonoBehaviour {
           alt="" class="screenshot"> </p>
       <br>
       <hr>
-      <h2><a name="props"></a>OSC</h2>
+      <h2>OSC</h2>
                 
       <table>
             <tr>
@@ -115,11 +114,11 @@ public class ReceiveOSCTest: MonoBehaviour {
         </table>  
       
       <p>The <span class="lite">handler function</span> must be as follows :</p>
-      <pre class="prettyprint">
+       <pre class="prettyprint" ><code>
 void NameOfFunction ( OscMessage message ) {
 
 }
-</pre>
+</code></pre>
 <br>
 
            <h2>OSCMessage</h2>
