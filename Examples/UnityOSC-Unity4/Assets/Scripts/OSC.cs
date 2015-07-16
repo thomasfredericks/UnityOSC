@@ -331,9 +331,30 @@ public class UDPPacketIO
 
 	}
 
-	public float GetFloat(int index) {
-		return (float) values[index];
+
+	public int GetInt(int index) {
+
+		if (values [index].GetType() == typeof(int) || values [index].GetType() == typeof(float) ) {
+			return (int)values [index];
+		} else {
+			Debug.Log("Wrong type");
+			return 0;
+		}
 	}
+
+	public float GetFloat(int index) {
+
+		if (values [index].GetType() == typeof(int)) {
+			float data = (int)values [index];
+			return data;
+		} else if (values [index].GetType() == typeof(float)) {
+			return (float)values [index];
+		} else {
+			Debug.Log("Wrong type");
+			return 0f;
+		}
+	}
+	
   }
 
   public delegate void OscMessageHandler( OscMessage oscM );
@@ -386,7 +407,7 @@ public class UDPPacketIO
 		
 		#if UNITY_EDITOR
 			paused = UnityEditor.EditorApplication.isPaused;
-			print ("editor paused "+paused);
+			//print ("editor paused "+paused);
 			// do stuff when the editor is paused.
 		#endif
 	}
@@ -395,7 +416,7 @@ public class UDPPacketIO
 
 
 	void Awake() {
-		print("Opening OSC listener on port " + listenPort);
+		//print("Opening OSC listener on port " + listenPort);
 
 		OscPacketIO = new UDPPacketIO(broadcastHost, broadcastPort, listenPort);
 		AddressTable = new Hashtable();
