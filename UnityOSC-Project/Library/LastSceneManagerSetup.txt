@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Receive and send test.unity
+  isLoaded: 1
+  isActive: 1
