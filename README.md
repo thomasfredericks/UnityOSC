@@ -8,3 +8,4 @@ Its actual file can be found in "Assets\OSC"
 
 Examples for Cycling '74 Max and TouchDesigner are included.
 
+Documentation : http://thomasfredericks.github.io/UnityOSC/
