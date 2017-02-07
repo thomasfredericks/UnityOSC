@@ -20,7 +20,7 @@ public class SendPositionOnOnMouseDown : MonoBehaviour {
         OscMessage message;
 
         message = new OscMessage();
-        message.address = "/OnMouseDown";
+        message.address = "/OnMouseDownXYZ";
         message.values.Add(transform.position.x);
         message.values.Add(transform.position.y);
         message.values.Add(transform.position.z);

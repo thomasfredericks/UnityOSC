@@ -1,9 +1,12 @@
 # UnityOSC
 Open Sound Control (OSC) for Unity 3D.
 
-The script is named : OSC.cs
+This Github is an actual Unity project. Open the folder in Unity.
 
-The actual file can be found in UnityOSC-Project\Assets\Scripts
+The OSC script is named : OSC.cs
+Its actual file can be found in "Assets\OSC"
 
-See the included 'Documentation' and 'Examples' for usage.
+Examples for Cycling '74 Max and TouchDesigner are included.
+
+The included 'Documentation' is outdated and needs to be updated.
 

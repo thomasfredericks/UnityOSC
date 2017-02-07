@@ -379,10 +379,10 @@ public class UDPPacketIO
   /// </summary>
   public class OSC : MonoBehaviour
   {
-	
-	public int listenPort  = 6969;
-	public string broadcastHost = "127.0.0.1";
-	public int broadcastPort  = 6161;
+
+    public int inPort  = 6969;
+    public string outIP = "127.0.0.1";
+    public int outPort  = 6161;
 
       private UDPPacketIO OscPacketIO;
       Thread ReadThread;
@@ -416,9 +416,9 @@ public class UDPPacketIO
 
 
 	void Awake() {
-		//print("Opening OSC listener on port " + listenPort);
+		//print("Opening OSC listener on port " + inPort);
 
-		OscPacketIO = new UDPPacketIO(broadcastHost, broadcastPort, listenPort);
+		OscPacketIO = new UDPPacketIO(outIP, outPort, inPort);
 		AddressTable = new Hashtable();
 
 		messagesReceived = new ArrayList();
