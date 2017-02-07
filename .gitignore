@@ -34,3 +34,6 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
+#TouchDesigner
+*.*.toe
+
