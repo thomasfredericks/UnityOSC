@@ -11,7 +11,7 @@ public class Instantiator : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		
-		float nombreInstances = 25;
+		float nombreInstances = 8;
 
 				
 		for ( int i =0; i < nombreInstances ; i++ ) {

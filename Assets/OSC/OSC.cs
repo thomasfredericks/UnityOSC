@@ -335,7 +335,9 @@ public class UDPPacketIO
 	public int GetInt(int index) {
 
 		if (values [index].GetType() == typeof(int) || values [index].GetType() == typeof(float) ) {
-			return (int)values [index];
+            int data = (int)values[index];
+            if (Double.IsNaN(data)) return 0;
+            return data;
 		} else {
 			Debug.Log("Wrong type");
 			return 0;
@@ -346,9 +348,12 @@ public class UDPPacketIO
 
 		if (values [index].GetType() == typeof(int)) {
 			float data = (int)values [index];
-			return data;
+            if (Double.IsNaN(data)) return 0f;
+            return data;
 		} else if (values [index].GetType() == typeof(float)) {
-			return (float)values [index];
+            float data = (float)values[index];
+            if (Double.IsNaN(data)) return 0f;
+            return data;
 		} else {
 			Debug.Log("Wrong type");
 			return 0f;

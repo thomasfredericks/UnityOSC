@@ -3,11 +3,11 @@ using System.Collections;
 
 public class ReceiveFFT : MonoBehaviour {
 
-	public OSC oscReference;
+	public OSC osc;
 	
 	// Use this for initialization
 	void Start () {
-		oscReference.SetAddressHandler( "/fft" , OnReceive );
+		osc.SetAddressHandler( "/fft" , OnReceive );
 		
 	}
 	
