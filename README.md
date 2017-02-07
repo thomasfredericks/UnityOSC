@@ -8,5 +8,3 @@ Its actual file can be found in "Assets\OSC"
 
 Examples for Cycling '74 Max and TouchDesigner are included.
 
-The included 'Documentation' is outdated and needs to be updated.
-
