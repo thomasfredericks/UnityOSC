@@ -12,8 +12,7 @@ function handleLoad() {
 }
 
 </script></head>
-
-  <body onload="handleLoad();">
+<body onload="handleLoad();">
   
     <div id="container">
         <img style="margin-left: auto; margin-right: auto; display: block;" src="images/unityosc.png">
@@ -25,9 +24,8 @@ function handleLoad() {
       <ul>
         <li><a href="https://github.com/thomasfredericks/UnityOSC/archive/master.zip"><strong>Download the script and Unity example project</strong></a> (it includes communication examples for Cycling '74 Max and TouchDesigner)</li>
         <li><a href="https://github.com/thomasfredericks/UnityOSC">UnityOSC source on
-            Github<br>
-          </a></li>
-      </ul>
+            Github</a></li>
+      </ul><h2>The example</h2>The download (and Github projet)&nbsp; is an actual Unity project. Open the folder in Unity and everything is ready to run.<br><br><span style="font-weight: bold;">The following instructions are for using UnityOSC in your own projects :</span><br>
         
         
       <h2>Importing UnityOSC</h2>
@@ -36,7 +34,7 @@ function handleLoad() {
       <br>
       <p id="span">Configure the <span class="hilite">OSC</span> port and IP settings to match your needs.</p>
       <br>
-        <img src="images/osc_cs_import.png" width="900px">
+        <img src="images/osc_cs_import.png" width="900">
       <h2>Receiving messages</h2>
       <p>To receive messages:</p>
           
@@ -56,71 +54,10 @@ function handleLoad() {
             <li><span class="code">/CubeZ</span> followed by one float</li>
       </ul>
         
-       <pre class="prettyprint"><code>using UnityEngine;
-using System.Collections;
-
-public class ReceivePosition : MonoBehaviour {
-    
-   	public OSC osc;
-
-
-	// Use this for initialization
-	void Start () {
-       osc.SetAddressHandler( "/CubeXYZ" , OnReceiveXYZ );
-       osc.SetAddressHandler("/CubeX", OnReceiveX);
-       osc.SetAddressHandler("/CubeY", OnReceiveY);
-       osc.SetAddressHandler("/CubeZ", OnReceiveZ);
-    }
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
-	void OnReceiveXYZ(OscMessage message){
-		float x = message.GetFloat(0);
-         float y = message.GetFloat(1);
-		float z = message.GetFloat(2);
-
-		transform.position = new Vector3(x,y,z);
-	}
-
-    void OnReceiveX(OscMessage message) {
-        float x = message.GetFloat(0);
-
-        Vector3 position = transform.position;
-
-        position.x = x;
-
-        transform.position = position;
-    }
-
-    void OnReceiveY(OscMessage message) {
-        float y = message.GetFloat(0);
-
-        Vector3 position = transform.position;
-
-        position.y = y;
-
-        transform.position = position;
-    }
-
-    void OnReceiveZ(OscMessage message) {
-        float z = message.GetFloat(0);
-
-        Vector3 position = transform.position;
-
-        position.z = z;
-
-        transform.position = position;
-    }
-
-
-}
-</code>	<br></pre>
+       <pre class="prettyprint"><code>using UnityEngine;<br>using System.Collections;<br><br>public class ReceivePosition : MonoBehaviour {<br>    <br>   	public OSC osc;<br><br><br>	// Use this for initialization<br>	void Start () {<br>       osc.SetAddressHandler( "/CubeXYZ" , OnReceiveXYZ );<br>       osc.SetAddressHandler("/CubeX", OnReceiveX);<br>       osc.SetAddressHandler("/CubeY", OnReceiveY);<br>       osc.SetAddressHandler("/CubeZ", OnReceiveZ);<br>    }<br>	<br>	// Update is called once per frame<br>	void Update () {<br>	<br>	}<br><br>	void OnReceiveXYZ(OscMessage message){<br>		float x = message.GetFloat(0);<br>         float y = message.GetFloat(1);<br>		float z = message.GetFloat(2);<br><br>		transform.position = new Vector3(x,y,z);<br>	}<br><br>    void OnReceiveX(OscMessage message) {<br>        float x = message.GetFloat(0);<br><br>        Vector3 position = transform.position;<br><br>        position.x = x;<br><br>        transform.position = position;<br>    }<br><br>    void OnReceiveY(OscMessage message) {<br>        float y = message.GetFloat(0);<br><br>        Vector3 position = transform.position;<br><br>        position.y = y;<br><br>        transform.position = position;<br>    }<br><br>    void OnReceiveZ(OscMessage message) {<br>        float z = message.GetFloat(0);<br><br>        Vector3 position = transform.position;<br><br>        position.z = z;<br><br>        transform.position = position;<br>    }<br><br><br>}<br></code>	<br></pre>
       
       <p>Do not forget to set the reference to the <span class="hilite">OSC.cs</span> script :</p>
-      <img src="images/osc_set_reference.png" width="900px">
+      <img src="images/osc_set_reference.png" width="900">
       <br>
       <hr>
       <h2>The handler function</h2>
