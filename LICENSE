@@ -1,8 +1,9 @@
 IMPORTANT :
 
 A large portion of the backend of this code is based on Makingthings's Make 
-Controller OSC C# implementation. Their code is licensed under the Apache License 2.0.
-http://www.apache.org/licenses/LICENSE-2.0
+Controller OSC C# implementation:
+(https://web.archive.org/web/20121021044334/http://www.makingthings.com:80/ref/firmware/html/group___o_s_c.html).
+Their code is licensed under the Apache License 2.0: http://www.apache.org/licenses/LICENSE-2.0
 
 FOR THE PARTS THAT I CODED OR MODIFIED :
 
