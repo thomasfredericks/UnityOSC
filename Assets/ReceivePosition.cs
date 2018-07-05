@@ -20,9 +20,9 @@ public class ReceivePosition : MonoBehaviour {
 	}
 
 	void OnReceiveXYZ(OscMessage message){
-		float x = message.GetFloat(0);
-         float y = message.GetFloat(1);
-		float z = message.GetFloat(2);
+		float x = message.GetInt(0);
+         float y = message.GetInt(1);
+		float z = message.GetInt(2);
 
 		transform.position = new Vector3(x,y,z);
 	}

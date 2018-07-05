@@ -334,11 +334,16 @@ public class UDPPacketIO
 
 	public int GetInt(int index) {
 
-		if (values [index].GetType() == typeof(int) || values [index].GetType() == typeof(float) ) {
+		if (values [index].GetType() == typeof(int) ) {
             int data = (int)values[index];
             if (Double.IsNaN(data)) return 0;
             return data;
-		} else {
+        }
+        else if (values[index].GetType() == typeof(float)) {
+            int data = (int)((float)values[index]);
+            if (Double.IsNaN(data)) return 0;
+            return data;
+        } else {
 			Debug.Log("Wrong type");
 			return 0;
 		}
@@ -405,22 +410,23 @@ public class UDPPacketIO
 	bool paused = false;
 
 
-	
-	void HandleOnPlayModeChanged()
-	{
+#if UNITY_EDITOR
+    
+    private void HandleOnPlayModeChanged(UnityEditor.PlayModeStateChange state) //FIX FOR UNITY POST 2017
+    {
 		// This method is run whenever the playmode state is changed.
 		
-		#if UNITY_EDITOR
+		
 			paused = UnityEditor.EditorApplication.isPaused;
 			//print ("editor paused "+paused);
 			// do stuff when the editor is paused.
-		#endif
+		
 	}
+#endif
 
 
 
-
-	void Awake() {
+    void Awake() {
 		//print("Opening OSC listener on port " + inPort);
 
 		OscPacketIO = new UDPPacketIO(outIP, outPort, inPort);
@@ -436,11 +442,12 @@ public class UDPPacketIO
 		ReadThread.IsBackground = true;      
 		ReadThread.Start();
 
-		#if UNITY_EDITOR
-		UnityEditor.EditorApplication.playmodeStateChanged = HandleOnPlayModeChanged;
-		#endif
+#if UNITY_EDITOR
+        //UnityEditor.EditorApplication.playmodeStateChanged = HandleOnPlayModeChanged;
+        UnityEditor.EditorApplication.playModeStateChanged += HandleOnPlayModeChanged;  //FIX FOR UNITY POST 2017
+#endif
 
-	}
+    }
 
 	void OnDestroy() {
 		Close();
