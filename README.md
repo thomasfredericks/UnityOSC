@@ -1,6 +1,6 @@
 
 
-**PLEAS NOTE THAT I DO NOT UPDATE OR SUPPORT UnityOSC ANYMORE. PLEASE USE THE FOLLOWING LIBRARIES INSTEAD:**
+**PLEASE NOTE THAT I DO NOT UPDATE OR SUPPORT UnityOSC ANYMORE. PLEASE USE THE FOLLOWING LIBRARIES INSTEAD:**
 * [Iam1337/extOSC: extOSC is a tool dedicated to simplify creation of applications in Unity with OSC protocol usage.](https://github.com/Iam1337/extOSC)
 * [keijiro/OscJack: Lightweight C# implementation of OSC server/client](https://github.com/keijiro/OscJack)
 * [keijiro/OscJackVS: OSC plugin for Unity Visual Scripting](https://github.com/keijiro/OscJackVS)
